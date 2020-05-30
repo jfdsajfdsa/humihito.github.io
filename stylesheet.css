@@ -1,2 +1,3 @@
-document.getElementById("test").innerHTML = "こんにちは！";
-
+p {
+text-align:center;
+}
