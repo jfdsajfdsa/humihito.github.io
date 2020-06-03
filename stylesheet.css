@@ -3,7 +3,13 @@ a {
   text-decoration: none;
 }
 
-
+.btn {
+    color: white;
+    display: inline-block;
+    opacity: 0.8;
+    padding: 8px 24px;
+    border-radius: 4px;
+}
 
 
 .btn:hover {
