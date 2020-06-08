@@ -10,8 +10,17 @@
     var nowHour = nowTime.getHours();
     var nowMin  = nowTime.getMinutes();
     var nowSec  = nowTime.getSeconds();
-    var msg = "現在" + nowYear +"/" + nowMon +"/"+ nowDate + " - " + nowHour +":" + nowMin + ":" + nowSec + " です。 ";
+    
+    var ampm = '';
+    if(nowHour < 12){
+      ampm = 'AM';
+    } else{
+      ampm = 'PM';
+    }
+    
+    var msg = "現在" + nowYear +"/" + nowMon +"/"+ nowDate + " - " + ampm + nowHour % 12 +":" + nowMin + ":" + nowSec + " です。 ";
     document.getElementById("RealtimeClockArea").innerHTML = msg;
+    
  }
   setInterval('showClock1()',1000);
 
