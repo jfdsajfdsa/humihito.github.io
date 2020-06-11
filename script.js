@@ -18,9 +18,8 @@
       ampm = 'PM';
     }
     
-    var msg = "現在" + nowYear +"/" + nowMon +"/"+ nowDate + " - " + ampm + nowHour % 12 +":" + nowMin + ":" + nowSec + " です。 ";
+    var msg = "現在" + nowYear +"/" + String(nowMon).padStart(2,'0') +"/"+ String(nowDate).padStart(2,'0') + " - " + ampm + String(nowHour % 12).padStart(2,'0') +":" + String(nowMin).padStart(2,'0') + ":" + String(nowSec).padStart(2,'0') + " です。 ";
     document.getElementById("RealtimeClockArea").innerHTML = msg;
-    
  }
   setInterval('showClock1()',1000);
 
