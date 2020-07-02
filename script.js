@@ -22,4 +22,25 @@
     document.getElementById("RealtimeClockArea").innerHTML = msg;
  }
   setInterval('showClock1()',1000);
+//ここまで時刻
 
+//ここからストップウォッチのコード
+var PassSec;
+
+function showPassage(){
+  PassSec++;
+  var msg = "ボタンを押してから " + PassSec + "秒が経過しました。";
+  document.getElementById('PassageArea').innerHTML = msg;
+}
+
+function startShowing(){
+  PassSec = 0;
+  PassageID = setInterval('showPassage()',1000);
+  document.getElementById('startcount').disabled = true;
+}
+
+function stopShowing(){
+  clearInterval(PassageID);
+  document.getElementById('startcount').disabled = false;
+}
+//ここまでストップウォッチのコード
